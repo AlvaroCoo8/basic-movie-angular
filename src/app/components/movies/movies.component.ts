@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { moviesMock } from '../../data/mocks/mockDataMovies';
 
 @Component({
   selector: 'app-components-movies',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './movies.component.css'
 })
 export class MoviesComponent {
-
+  movies = moviesMock;
 }

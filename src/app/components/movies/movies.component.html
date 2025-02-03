@@ -1,1 +1,22 @@
-<p>movies works!</p>
+<h1 class="text-center">Angular Movies</h1>
+<hr />
+<div class="container">
+  <div class="row justify-content-start">
+    @for (movie of movies; track $index) {
+    <div class="col-md-3 d-flex justify-content-center mb-4">
+      <div class="card">
+        <img
+          src="{{ movie.image }}"
+          class="card-img-top"
+          alt="{{ movie.title }}"
+        />
+        <div class="card-body text-center">
+          <h5 class="card-title"><strong>Movie:</strong> {{ movie.title }}</h5>
+          <p class="card-text"><strong>Premiere:</strong> {{ movie.year }}</p>
+          <p class="card-text"><strong>Stars:</strong> {{ movie.stars }}</p>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>
