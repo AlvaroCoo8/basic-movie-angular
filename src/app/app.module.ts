@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './components/movies/movies.component';
+import { MoviesModule } from "./movies/movies.module";
 
 @NgModule({
   declarations: [
@@ -10,8 +11,9 @@ import { MoviesComponent } from './components/movies/movies.component';
     MoviesComponent
   ],
   imports: [
-    BrowserModule
-  ],
+    BrowserModule,
+    MoviesModule
+],
   providers: [],
   bootstrap: [AppComponent]
 })
