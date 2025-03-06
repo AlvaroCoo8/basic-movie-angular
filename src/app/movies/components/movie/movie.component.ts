@@ -17,7 +17,14 @@ export class MovieComponent {
   public movieTittleEventEmitter: EventEmitter<string> =
     new EventEmitter<string>();
 
+  @Output()
+  public movieIdEventEmitter: EventEmitter<string> = new EventEmitter<string>();
+
   public emitMovieTitle(title: string): void {
     this.movieTittleEventEmitter.emit(title);
+  }
+
+  public emitMovieId(idMovie: string): void {
+    this.movieIdEventEmitter.emit(idMovie);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Movie } from '../../interfaces/movies.interface';
 
 @Component({
@@ -14,7 +14,14 @@ export class MoviesListComponent {
   @Input()
   public movies: Movie[] = [];
 
+  @Output()
+  public movieIdEventEmitter: EventEmitter<string> = new EventEmitter<string>();
+
   showTitleMovieSelected(value: string): void {
     this.titleMovieSelected = value;
+  }
+
+  emitMovieId(value: string): void {
+    this.movieIdEventEmitter.emit(value);
   }
 }

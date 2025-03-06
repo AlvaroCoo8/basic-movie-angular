@@ -17,6 +17,13 @@
 
     <div class="buttons mt-3 d-flex justify-content-center gap-2">
       <button
+        (click)="emitMovieId(movie.id)"
+        class="btn btn-danger btn px-3 py-1"
+      >
+        Remove Movie
+      </button>
+
+      <button
         (click)="emitMovieTitle(movie.title)"
         class="btn btn-primary btn px-3 py-1"
       >
