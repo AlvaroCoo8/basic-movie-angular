@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Movie } from '../../interfaces/movies.interface';
 
 @Component({
   selector: 'movies-components-movies-list',
@@ -9,4 +10,6 @@ import { Component } from '@angular/core';
 })
 export class MoviesListComponent {
 
+  @Input()
+  public movies: Movie[] = [];
 }

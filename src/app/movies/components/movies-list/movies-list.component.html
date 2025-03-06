@@ -1,1 +1,10 @@
-<p>movies-list works!</p>
+<h1 class="text-center my-4">🎬 Angular Movies 🎥</h1>
+<hr />
+
+<div class="container d-flex flex-wrap justify-content-center gap-3">
+  @for (movie of movies; track movie.id) {
+  <movies-components-movie
+    [movie]="movie"
+  ></movies-components-movie>
+  }
+</div>
