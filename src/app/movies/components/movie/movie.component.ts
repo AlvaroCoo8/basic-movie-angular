@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Movie } from '../../interfaces/movies.interface';
 
 @Component({
@@ -12,4 +12,12 @@ export class MovieComponent {
 
   @Input()
   public movie!: Movie;
+
+  @Output()
+  public movieTittleEventEmitter: EventEmitter<string> =
+    new EventEmitter<string>();
+
+  public emitMovieTitle(title: string): void {
+    this.movieTittleEventEmitter.emit(title);
+  }
 }

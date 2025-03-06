@@ -1,10 +1,14 @@
 <h1 class="text-center my-4">🎬 Angular Movies 🎥</h1>
 <hr />
 
+<h3 class="text-center">Selected Movie: {{ titleMovieSelected }}</h3>
+<hr />
+
 <div class="container d-flex flex-wrap justify-content-center gap-3">
   @for (movie of movies; track movie.id) {
   <movies-components-movie
     [movie]="movie"
+    (movieTittleEventEmitter)="showTitleMovieSelected($event)"
   ></movies-components-movie>
   }
 </div>
